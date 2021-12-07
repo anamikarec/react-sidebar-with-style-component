@@ -8,16 +8,14 @@ const Drawer = styled.section`
 
 const DrawerItem = ({ label, icon }) => {
     return (
-        <table>
-            <tr>
-                <td>
+        <div style={{display: 'flex'}}>
+                <div style={{paddingTop:"20px"}}>
                     <img width="40px" height="35px" src={icon} alt="" />
-                </td>
-                <td style={{paddingLeft: 30}}>
+                </div>
+                <div style={{paddingLeft: 30}}>
                     <p style={{ fontSize: "20px", fontWeight: "450" }}>{label}</p>
-                </td>
-            </tr>
-        </table>
+                </div>
+        </div>
     )
 }
 
@@ -27,7 +25,7 @@ export default function SideBar() {
         <div style={{
             border: "1px solid rgb(219,219,219)",
             paddingTop: "60px",
-            maxHeight: "350px",
+            height: "350px",
             overflowY: "scroll"
         }}>
             <Drawer>
